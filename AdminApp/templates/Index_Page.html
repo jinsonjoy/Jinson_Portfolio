@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+
+<!--Message Button Style-->
+<style>
+  .custom-btn {
+    background-color: #0d6efd; /* Bootstrap primary color */
+    color: #fff; /* Text color */
+    font-size: 18px; /* Increase text size */
+    padding: 12px 30px; /* Increase button size */
+    border-radius: 8px; /* Rounded corners */
+    border: none; /* Remove border if needed */
+    transition: transform 0.2s; /* Smooth hover effect */
+  }
+
+  .custom-btn:hover {
+    transform: scale(1.05); /* Slightly enlarge on hover */
+    background-color: #0b5ed7; /* Slightly darker shade on hover */
+  }
+</style>
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Portfolio-JINSON K J</title>
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+
+  <!-- Favicons -->
+<!--  <link href="{% static '/img/favicon.png' %}" rel="icon">-->
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="{% static 'assets/vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/bootstrap-icons/bootstrap-icons.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/aos/aos.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/glightbox/css/glightbox.min.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/swiper/swiper-bundle.min.css' %}" rel="stylesheet">
+
+  <!-- Main CSS File -->
+  <link href="{% static 'assets/css/main.css' %}" rel="stylesheet">
+
+  <!-- =======================================================
+  * Template Name: DevFolio
+  * Template URL: https://bootstrapmade.com/devfolio-bootstrap-portfolio-html-template/
+  * Updated: Aug 07 2024 with Bootstrap v5.3.3
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
+
+<body class="index-page">
+
+  <header id="header" class="header d-flex align-items-center sticky-top">
+    <div class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
+
+      <a href="#" class="logo d-flex align-items-center">
+        <!-- Uncomment the line below if you also wish to use an image logo -->
+        <!-- <img src="assets/img/logo.png" alt=""> -->
+        <h1 class="sitename">Portfolio</h1>
+      </a>
+
+      <nav id="navmenu" class="navmenu">
+        <ul>
+          <li><a href="#hero" class="active">Home<br></a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+      </nav>
+
+    </div>
+  </header>
+
+  <main class="main">
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero section dark-background"
+             style="display: flex; align-items: center; justify-content: space-between; padding: 100px; overflow: hidden;">
+
+      <!-- Left side: text -->
+      <div style="flex: 1; text-align: left;margin-top:-160px;margin-left:200px; z-index: 10;" data-aos="fade-up"
+           data-aos-delay="100">
+        <h2 style="font-size: 48px; font-weight: 700;color: white;">I AM JINSON K J</h2>
+        <p style="font-size: 20px; margin-top: 10px;color: white;">
+          <span class="typed"
+                data-typed-items="Python Full-Stack Web Developer, Freelancer, Front-End Developer, Back-End Developer"></span>
+        </p>
+      </div>
+
+
+      <!-- Right side: image -->
+      <div style="flex: 1; display: flex; justify-content: flex-end;">
+        <img src="{% static 'assets/img/dp.png' %}"
+             alt="Profile"
+             data-aos="fade-in"
+             style=";margin-top:-50px;width:750px;margin-left:740px; height: auto; border-radius: 10px; z-index: 10; object-fit: contain;">
+      </div>
+
+
+    </section>
+    <!--    Hero Section &ndash;&gt-->
+
+
+    <!-- About Section -->
+    <section id="about" class="about section">
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+        <div class="about-me">
+          <h4>About me</h4>
+        </div>
+
+        <div class="row gy-4">
+          <div class="col-md-6">
+
+            <div class="row justify-content-between gy-4">
+              <div class="col-lg-5" style="position: relative; z-index: 20;">
+                <img style="position: relative; z-index: 20; border-radius: 10px;height:250px;margin-top:10px" src="{% static 'assets/img/dp.png' %}" class="img-fluid" alt="">
+              </div>
+              <div style="margin-top:30px" class="col-lg-7 about-info">
+                <p><strong>Name: </strong> <span>JINSON K J</span></p>
+                <p><strong>Profile: </strong> <span>PYTHON FULL-STACK WEB DEVELOPER</span></p>
+                <p><strong>Degree: </strong> <span>BACHELOR'S DEGREE</span></p>
+                <p><strong>Date of Birth: </strong> <span>03-10-1996</span></p>
+                <p><strong>City: </strong> <span>ALUVA</span></p>
+                <p><strong>Email: </strong> <span>jinsonjoy0001@gmail.com</span></p>
+                <p><strong>Phone: </strong> <span>+ 91 81 39 89 39 89</span></p>
+              </div>
+            </div>
+
+            <div style="margin-top:160px;column; align-items: center;width:1100px;margin-left:80px" class="skills-content skills-animation">
+
+              <h5 style="text-align:center;padding-top:-10px">Skills</h5>
+
+              <div class="progress" style="width: 100%;">
+                <span class="skill"><span>HTML</span> <i class="val">95%</i></span>
+                <div class="progress-bar-wrap">
+                  <div class="progress-bar" role="progressbar" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+              </div><!-- End Skills Item -->
+
+              <div class="progress">
+                <span class="skill"><span>CSS</span> <i class="val">90%</i></span>
+                <div class="progress-bar-wrap">
+                  <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+              </div><!-- End Skills Item -->
+
+              <div class="progress">
+                <span class="skill"><span>JavaScript</span> <i class="val">85%</i></span>
+                <div class="progress-bar-wrap">
+                  <div class="progress-bar" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+              </div><!-- End Skills Item -->
+
+              <div class="progress">
+                <span class="skill"><span>Python</span> <i class="val">95%</i></span>
+                <div class="progress-bar-wrap">
+                  <div class="progress-bar" role="progressbar" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+              </div><!-- End Skills Item -->
+
+            </div>
+          </div>
+
+          <div class="col-md-6">
+            <div class="about-me">
+<!--              <h4>About me</h4>-->
+              <p style="text-align: justify;">
+                Dynamic and results-oriented software professional with expertise in Python, Django, React, and SQL,
+                complemented by a solid foundation in web development and data management. Highly proficient in MS
+                Office, Google Sheets, and modern development tools including Git, GitHub, and VS Code. Passionate about
+                designing and delivering efficient, user-focused solutions, consistently producing high-quality results
+                through collaboration, innovation, and continuous learning.
+              </p>
+              <br>
+              <p style="text-align: justify;">
+                Proven ability to analyze complex problems and develop scalable, efficient solutions across diverse
+                projects. Experienced in building full-stack web applications, implementing RESTful APIs, and optimizing
+                database performance to ensure seamless user experiences. Adept at translating client requirements into
+                technical specifications and delivering robust solutions that align with business objectives.
+              </p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </section><!-- /About Section -->
+
+    <!-- Resume Section -->
+    <section id="resume" class="resume section">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Resume</h2>
+        <p>Focused on finding effective solutions and achieving goals through consistent effort and innovation</p>
+      </div><!-- End Section Title -->
+
+      <div class="container">
+
+        <div class="row">
+
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+            <h3 class="resume-title">Sumary</h3>
+
+            <div class="resume-item pb-0">
+              <h4>Jinson k j</h4>
+              <p><em>Creative and detail-oriented Front-End Web Developer with expertise in building responsive, engaging, and intuitive user interfaces. Skilled in translating design concepts into high-quality, functional web applications while ensuring seamless user experiences. Adept at collaborating with cross-functional teams, optimizing performance, and applying modern web technologies to deliver innovative solutions.</em></p>
+              <ul>
+                <li>Kaitharan House , Alangad p o , Kottappuram</li>
+                <li>+91 81 39 89 39 89</li>
+                <li>jinsonjoy0001@gmail.com</li>
+              </ul>
+            </div><!-- Edn Resume Item -->
+
+            <h3 class="resume-title pb-0">Education</h3>
+            <div class="resume-item">
+              <h4>Luminar Technolab - (Python Full-Stack Web Developer)</h4>
+              <h5> Feb 2025 - Sep 2025</h5>
+              <p><em>Luminar Technolab, Kakkanad, India</em></p>
+
+              <ul>
+                <li> <strong> Programming:</strong> Performance to handle large databases.Developed real-world projects.</li>
+                <li> <strong>Front-End Development:</strong> Expertise in creating responsive, high-performance user interfaces.</li>
+                <li> <strong>Back-End Development:</strong> Expert in crafting robust, high-performance, and scalable back-end systems.</li>
+              </ul>
+            </div><!-- Edn Resume Item -->
+
+            <div class="resume-item pb-0">
+              <h4>B COM - Computer Application</h4>
+              <h5> April - 2018</h5>
+              <p><em>Lakshmi School of management, North Paravur, India</em></p>
+              <p>Completed a Bachelor of Commerce in Computer Applications, gaining a strong foundation in accounting, business management, and information technology. Developed analytical, problem-solving, and software skills while participating in various academic and extracurricular activities that enhanced teamwork and leadership abilities.</p>
+            </div><!-- Edn Resume Item -->
+
+            <div class="resume-item pb-0">
+              <h3 class="resume-title">Professional Experience</h3>
+              <h4>Luminar Technohub</h4>
+              <h4>Python Full-Stack Web Developer - (INTERN)</h4>
+              <h5> November - 2025</h5>
+              <p><em>Luminar Technohub, Kakkanad, India</em></p>
+              <p>
+                Worked as a Python Full-Stack Web Developer Intern, gaining hands-on experience in Django and React.
+                Assisted in building RESTful APIs, integrating databases, and optimizing web applications while
+                collaborating with the team to deliver efficient, scalable solutions.
+              </p>
+
+              <ul>
+                <li>Developed and maintained full-stack web applications using Python, Django, and React.</li>
+                <li>Implemented RESTful APIs and integrated with SQL databases.</li>
+                <li>Collaborated with team members to gather requirements and design solutions.</li>
+                <li>Tested, debugged, and optimized application features for better performance.</li>
+              </ul>
+            </div><!-- Edn Resume Item -->
+
+          </div>
+
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
+            <h3 class="resume-title">Professional Experience</h3>
+            <div class="resume-item">
+              <h4> <strong>Team Leader -</strong> Zophop Technologies Pvt. Ltd. (Chalo)</h4>
+              <h5>Jan 2018 - Feb 2025</h5>
+              <p><em>Kalamasserry, Kerala, India </em></p>
+              <ul>
+                <li><strong>Proven Leadership:</strong> Successfully led teams at Chalo to achieve performance targets
+                  and project deadlines.
+                </li>
+                <li><strong>Performance Management:</strong> Skilled in setting goals, monitoring KPIs, and coaching
+                  team members for continuous improvement.
+                </li>
+                <li><strong>Problem Solving & Decision Making:</strong> Effectively addressed complex challenges, making
+                  strategic decisions to enhance team productivity and project outcomes.
+                </li>
+                <li><strong>Collaboration & Mentoring:</strong> Fostered a collaborative work environment and mentored
+                  team members to develop their skills and capabilities.
+                </li>
+              </ul>
+            </div><!-- Edn Resume Item -->
+
+            <h3 class="resume-title pb-0">Projects</h3>
+            <div class="resume-item">
+              <p><em><strong>Hospital Management System:</strong>To automate Hospital workflows, enable seamless
+                coordination between staff and patients,
+                and improve overall efficiency and service quality. & mid scale enterprises. Tech: Python.</em></p>
+              <ul>
+                <li><strong>Vison:</strong> Automate and streamline hospital workflows</li>
+                <li><strong>Patient Management:</strong> Registration, EMR/EHR, history tracking.</li>
+                <li><strong>Appointments & Scheduling:</strong> Online booking,booking alerts & reminders.</li>
+                <li><strong>Pharmacy & Inventory:</strong> Stock management, alerts, billing.</li>
+                <li><strong>Security:</strong> Role-based access, encrypted data, audit logs.</li>
+
+              </ul>
+
+              <p><em><strong>E-Commerce Platform for Fruits, Vegetables & Sweets:</strong>Implementing product
+                catalog,cart & Checkout,Payment
+                gateway, Admin analytics, Stock control,Secure User Authentication, role based-Access, Category based
+                product management.
+              </em></p>
+              <ul>
+                <li><strong>Shopping & Checkout:</strong>Developed cart functionality, secure checkout, and integrated payment gateway.</li>
+                <li><strong>Admin & Analytics:</strong> Built role-based access for admins with dashboards for analytics, inventory, and sales tracking.</li>
+                <li><strong>User Experience:</strong>  Implemented secure user authentication and ensured smooth, responsive, and intuitive navigation for customers.</li>
+              </ul>
+
+              <p><em><strong>Electronics E-Commerce System:</strong>Build an online platform for purchasing electronic
+                products, enabling users to browse,
+                filter, and buy items easily, while ensuring a smooth shopping experience for customers and efficient
+                management for the
+                platform.</em></p>
+              <ul>
+                <li><strong>Vison:</strong>  Streamline online electronics shopping with user-friendly interfaces and secure transactions.</li>
+                <li><strong>Product histoManagement: </strong>  Display products with details, search and filter by category.</li>
+                <li><strong>Shopping Cart & Checkout:</strong> Add/remove products, view cart summary, update quantities, and place orders.</li>
+                <li><strong>User Management: </strong> Login, logout, and user registration with secure authentication</li>
+                <li><strong>Payment Integration:</strong> Secure payment processing with confirmation and order summary.</li>
+
+              </ul>
+
+            </div><!-- Edn Resume Item -->
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section><!-- /Resume Section -->
+
+    <!-- Services Section -->
+    <section id="services" class="services section">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Services</h2>
+        <p>Dedicated to providing high-quality solutions with efficiency, precision, and a focus on user satisfaction.</p>
+      </div><!-- End Section Title -->
+
+      <div class="container">
+
+        <div class="row gy-4">
+
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+            <div class="service-item  position-relative">
+              <div class="icon">
+                <i class="bi bi-activity"></i>
+              </div>
+              <a href="#" class="stretched-link">
+                <h3>Front-End Development</h3>
+              </a>
+              <p>Design and implement responsive, interactive, and user-friendly interfaces using HTML, CSS, JavaScript, and modern frameworks like React or Vue.js.</p>
+            </div>
+          </div><!-- End Service Item -->
+
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+            <div class="service-item position-relative">
+              <div class="icon">
+                <i class="bi bi-broadcast"></i>
+              </div>
+              <a href="#" class="stretched-link">
+                <h3>Back-End Development</h3>
+              </a>
+              <p>Build robust and scalable server-side applications, APIs, and databases using Python, Django, Node.js, SQL, or NoSQL solutions.</p>
+            </div>
+          </div><!-- End Service Item -->
+
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+            <div class="service-item position-relative">
+              <div class="icon">
+                <i class="bi bi-easel"></i>
+              </div>
+              <a href="#" class="stretched-link">
+                <h3>Full-Stack Web Development</h3>
+              </a>
+              <p>Deliver end-to-end web solutions combining front-end and back-end development, ensuring seamless user experiences and efficient server performance.</p>
+            </div>
+          </div><!-- End Service Item -->
+
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="400">
+            <div class="service-item position-relative">
+              <div class="icon">
+                <i class="bi bi-bounding-box-circles"></i>
+              </div>
+              <a href="#" class="stretched-link">
+                <h3>eCommerce Solutions</h3>
+              </a>
+              <p>Develop custom eCommerce platforms with product management, secure checkout, payment integration, and analytics for optimized business operations.</p>
+              <a href="#" class="stretched-link"></a>
+            </div>
+          </div><!-- End Service Item -->
+
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="500">
+            <div class="service-item position-relative">
+              <div class="icon">
+                <i class="bi bi-calendar4-week"></i>
+              </div>
+              <a href="#" class="stretched-link">
+                <h3>Web Application Maintenance</h3>
+              </a>
+              <p>Provide ongoing support, debugging, updates, and optimization to keep web applications secure, fast, and fully functional.</p>
+              <a href="#" class="stretched-link"></a>
+            </div>
+          </div><!-- End Service Item -->
+
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="600">
+            <div class="service-item position-relative">
+              <div class="icon">
+                <i class="bi bi-chat-square-text"></i>
+              </div>
+              <a href="#" class="stretched-link">
+                <h3>API Development & Integration</h3>
+              </a>
+              <p>Create and integrate RESTful or GraphQL APIs for seamless communication between web applications, mobile apps, and third-party services.</p>
+              <a href="#" class="stretched-link"></a>
+            </div>
+          </div><!-- End Service Item -->
+
+        </div>
+
+      </div>
+
+    </section><!-- /Services Section -->
+
+    <!-- Stats Section -->
+    <section id="stats" class="stats section accent-background">
+
+      <img src="{% static 'assets/img/stats-bg.jpg' %}" alt="" data-aos="fade-in">
+
+      <div class="container position-relative" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="row gy-4">
+
+          <div class="col-lg-3 col-md-6">
+            <div class="stats-item text-center w-100 h-100">
+<!--              <span data-purecounter-start="0" data-purecounter-end="232" data-purecounter-duration="0" class="purecounter">232</span>-->
+<!--              <p>Clients</p>-->
+            </div>
+          </div><!-- End Stats Item -->
+
+          <div class="col-lg-3 col-md-6">
+            <div class="stats-item text-center w-100 h-100">
+<!--              <span data-purecounter-start="0" data-purecounter-end="521" data-purecounter-duration="0" class="purecounter">521</span>-->
+<!--              <p>Projects</p>-->
+            </div>
+          </div><!-- End Stats Item -->
+
+          <div class="col-lg-3 col-md-6">
+            <div class="stats-item text-center w-100 h-100">
+<!--              <span data-purecounter-start="0" data-purecounter-end="1453" data-purecounter-duration="0" class="purecounter">1453</span>-->
+<!--              <p>Hours Of Support</p>-->
+            </div>
+          </div><!-- End Stats Item -->
+
+          <div class="col-lg-3 col-md-6">
+            <div class="stats-item text-center w-100 h-100">
+<!--              <span data-purecounter-start="0" data-purecounter-end="32" data-purecounter-duration="0" class="purecounter">32</span>-->
+<!--              <p>Awards</p>-->
+            </div>
+          </div><!-- End Stats Item -->
+
+        </div>
+
+      </div>
+
+    </section><!-- /Stats Section -->
+
+
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact section">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Contact</h2>
+        <p>Let’s connect! We’re ready to help bring your ideas to life.</p>
+      </div><!-- End Section Title -->
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="info-wrap" data-aos="fade-up" data-aos-delay="200">
+          <div class="row gy-5">
+
+            <div class="col-lg-4">
+              <div class="info-item d-flex align-items-center">
+                <i class="bi bi-geo-alt flex-shrink-0"></i>
+                <div>
+                  <h3>Address</h3>
+                  <p>Kaitharan House, Alanagad p.o</p>
+                  <p>Kottappuram Kerala, India 683511</p>
+                </div>
+              </div>
+            </div><!-- End Info Item -->
+
+            <div class="col-lg-4">
+              <div class="info-item d-flex align-items-center">
+                <i class="bi bi-telephone flex-shrink-0"></i>
+                <div>
+                  <h3>Call Us</h3>
+                  <p>+91 8139893989</p>
+                </div>
+              </div>
+            </div><!-- End Info Item -->
+
+            <div class="col-lg-4">
+              <div class="info-item d-flex align-items-center">
+                <i class="bi bi-envelope flex-shrink-0"></i>
+                <div>
+                  <h3>Email Us</h3>
+                  <p>jinsonjoy0001@gmail.com</p>
+                </div>
+              </div>
+            </div><!-- End Info Item -->
+
+          </div>
+        </div>
+
+      </div>
+
+    </section><!-- /Contact Section -->
+
+  </main>
+
+  <footer id="footer" class="footer accent-background">
+
+    <div class="container">
+      <div class="copyright text-center ">
+        <p>© <span>Copyright</span> <strong class="px-1 sitename">Portfolio</strong> <span>All Rights Reserved</span></p>
+      </div>
+      <div class="social-links d-flex justify-content-center">
+        <a href="https://github.com/jinsonjoy"><i class="bi bi-github"></i></a>
+        <a href="https://www.facebook.com/share/17S75gK7XQ/"><i class="bi bi-facebook"></i></a>
+        <a href="https://www.instagram.com/jins0n_j0y_?igsh=MWUwM29vbjNncGp1eg=="><i class="bi bi-instagram"></i></a>
+        <a href="https://www.linkedin.com/in/jinsonjoy"><i class="bi bi-linkedin"></i></a>
+      </div>
+      <div class="credits">
+      </div>
+    </div>
+
+  </footer>
+
+  <!-- Scroll Top -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Preloader -->
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+  <script src="{% static 'assets/vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+  <script src="{% static 'assets/vendor/php-email-form/validate.js' %}"></script>
+  <script src="{% static 'assets/vendor/aos/aos.js' %}"></script>
+  <script src="{% static 'assets/vendor/typed.js/typed.umd.js' %}"></script>
+  <script src="{% static 'assets/vendor/waypoints/noframework.waypoints.js' %}"></script>
+  <script src="{% static 'assets/vendor/purecounter/purecounter_vanilla.js' %}"></script>
+  <script src="{% static 'assets/vendor/glightbox/js/glightbox.min.js' %}"></script>
+  <script src="{% static 'assets/vendor/imagesloaded/imagesloaded.pkgd.min.js' %}"></script>
+  <script src="{% static 'assets/vendor/isotope-layout/isotope.pkgd.min.js' %}"></script>
+  <script src="{% static 'assets/vendor/swiper/swiper-bundle.min.js' %}"></script>
+
+  <!-- Main JS File -->
+  <script src="{% static 'assets/js/main.js' %}"></script>
+
+</body>
+
+</html>
