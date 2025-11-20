@@ -24,8 +24,9 @@ SECRET_KEY = 'django-insecure-ou4)myz0%af5=6xhbdtn$7%v@m2a8a)t5+e*d19se=@#drq&yy
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
+# DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['mellow-empanada-b8413d.netlify.app']
 
 
 # Application definition
@@ -121,3 +122,11 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+import os
+
+STATIC_URL = '/static/'
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')  # this is where collectstatic will collect all files
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, 'static'),  # your local static folder
+]
