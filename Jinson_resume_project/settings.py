@@ -23,11 +23,11 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-ou4)myz0%af5=6xhbdtn$7%v@m2a8a)t5+e*d19se=@#drq&yy'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-# DEBUG = False
-DEBUG = True
+DEBUG = False
+# DEBUG = True
 
 # ALLOWED_HOSTS = ['mellow-empanada-b8413d.netlify.app']
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['jinson.pythonanywhere.com']
 
 
 # Application definition
