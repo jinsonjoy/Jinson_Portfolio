@@ -518,6 +518,33 @@
               </div>
             </div><!-- End Info Item -->
 
+            <form id="contactForm" action="{% url 'send_email' %}" method="post" class="php-email-form" data-aos="fade-up" data-aos-delay="300">
+              {% csrf_token %}
+              <div class="row gy-4">
+
+                <div class="col-md-6">
+                  <input type="text" name="name" class="form-control" placeholder="Your Name" required>
+                </div>
+
+                <div class="col-md-6 ">
+                  <input type="email" class="form-control" name="email" placeholder="Your Email" required>
+                </div>
+
+                <div class="col-md-12">
+                  <input type="text" class="form-control" name="subject" placeholder="Subject" required>
+                </div>
+
+                <div class="col-md-12">
+                  <textarea class="form-control" name="message" rows="2" placeholder="Message" required></textarea>
+                </div>
+
+                <div class="col-md-12 text-center">
+                  <button type="submit">Send Message</button>
+                </div>
+
+              </div>
+            </form><!-- End Contact Form -->
+
           </div>
         </div>
 
@@ -565,6 +592,30 @@
 
   <!-- Main JS File -->
   <script src="{% static 'assets/js/main.js' %}"></script>
+
+<!--script for email success-->
+<script>
+document.getElementById("contactForm").addEventListener("submit", async function(e) {
+    e.preventDefault();  // stop page refresh
+
+    let formData = new FormData(this);
+
+    let response = await fetch("/send-email/", {
+        method: "POST",
+        body: formData,
+    });
+
+    let data = await response.json();
+
+    // show alert
+    alert(data.message);
+
+    if (data.status === "success") {
+        document.getElementById("contactForm").reset(); // clear form
+    }
+});
+</script>
+
 
 </body>
 

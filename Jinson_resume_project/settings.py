@@ -23,10 +23,11 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-ou4)myz0%af5=6xhbdtn$7%v@m2a8a)t5+e*d19se=@#drq&yy'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
-# DEBUG = True
+# DEBUG = False
+DEBUG = True
 
-ALLOWED_HOSTS = ['mellow-empanada-b8413d.netlify.app']
+# ALLOWED_HOSTS = ['mellow-empanada-b8413d.netlify.app']
+ALLOWED_HOSTS = []
 
 
 # Application definition
@@ -130,3 +131,23 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')  # this is where collectstat
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'static'),  # your local static folder
 ]
+
+
+import os
+
+EMAIL_BACKEND = "django.core.mail.backends.smtp.EmailBackend"
+EMAIL_HOST = "smtp.gmail.com"
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
+
+EMAIL_HOST_USER = os.environ.get("EMAIL_HOST_USER")
+EMAIL_HOST_PASSWORD = os.environ.get("EMAIL_HOST_PASSWORD")
+
+# Send emails TO your own inbox
+EMAIL_RECEIVER = os.environ.get("EMAIL_RECEIVER")
+
+
+# render add
+# EMAIL_HOST_USER=yourgmail@gmail.com
+# EMAIL_HOST_PASSWORD=your_google_app_password
+# EMAIL_RECEIVER=yourgmail@gmail.com
